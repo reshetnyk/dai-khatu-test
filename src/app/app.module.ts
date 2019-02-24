@@ -5,6 +5,7 @@ import {RentCreationModule} from './rent-creation/rent-creation.module';
 import {AppRoutingModule} from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import {HomeModule} from './home/home.module';
+import {SharedModule} from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -12,8 +13,9 @@ import {HomeModule} from './home/home.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    HomeModule
+    HomeModule,
+    SharedModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

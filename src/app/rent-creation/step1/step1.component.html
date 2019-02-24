@@ -1,0 +1,78 @@
+<div class="rent-editor">
+  <div class="rent-editor__properties">
+    <div class="properties-group">
+      <h3 class="properties-group__header">Яке житло ви здаєте?</h3>
+      <div class="property">
+        <span class="property__name">Тип помешкання</span>
+        <div class="property__fields">
+          <select class="select" name="place-type" id="">
+            <option class="select-option" class="" value="stub">виберіть варіант</option>
+            <option class="select-option" value="private_place">Приватний будинок</option>
+            <option class="select-option" value="hostel">Багатоповерхівка/гуртожиток</option>
+          </select>
+        </div>
+        <span class="property__descr"></span>
+      </div>
+      <div class="property">
+        <span class="property__name">Тип здачі</span>
+        <div class="property__fields">
+          <select class="select" name="place-type" id="">
+            <option class="select-option" class="" value="stub">виберіть варіант</option>
+            <option class="select-option" value="private_place">Все помешкання</option>
+            <option class="select-option" value="hostel">Кімната</option>
+            <option class="select-option" value="hostel">Ліжкомісце</option>
+          </select>
+        </div>
+        <span class="property__descr"></span>
+      </div>
+    </div>
+    <div class="properties-group">
+      <h3 class="properties-group__header">Скільки гостей вміщує ваще житло?</h3>
+
+      <div class="property">
+        <span class="property__name"></span>
+        <div class="property__fields">
+          <div class="input-step-number">
+            <span class="input-label">Гості</span>
+            <button class="btn input-number__subtract-btn">-</button>
+            <span class="input-number__value">1</span>
+            <button class="btn input-number__add-btn">+</button>
+          </div>
+        </div>
+        <span class="property__descr"></span>
+      </div>
+
+      <div class="property">
+        <span class="property__name">Скількома ліжками можуть користуватися гості?</span>
+        <div class="property__fields">
+          <div class="input-step-number">
+            <span class="input-label">Кількість ліжок</span>
+            <button class="btn input-number__subtract-btn">-</button>
+            <span class="input-number__value">1</span>
+            <button class="btn input-number__add-btn">+</button>
+          </div>
+        </div>
+        <span class="property__descr"></span>
+      </div>
+
+      <div class="property">
+        <span class="property__name">Скількома спальнями можуть користуватися гості?</span>
+        <div class="property__fields">
+          <select class="select" name="bedrooms-amount">
+            <option class="select-option" value="1">1 спальня</option>
+            <option class="select-option" value="2">2 спальні</option>
+            <option class="select-option" value="3">3 спальні</option>
+            <option class="select-option" value="4">4 спальні</option>
+            <option class="select-option" value="5">5 спалень</option>
+          </select>
+        </div>
+        <span class="property__descr"></span>
+      </div>
+    </div>
+  </div>
+  <div class="rent-editor__info"></div>
+  <div class="rent-editor__actions">
+    <button class="btn rent-editor-btn-prev">Назад</button>
+    <button class="btn rent-editor-btn-next">Далі</button>
+  </div>
+</div>
