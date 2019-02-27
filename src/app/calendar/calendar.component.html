@@ -1,0 +1,25 @@
+<div class="calendar-container">
+  <div class="btn-calendar" (click)="toggleCalendar()">
+    <svg class="calender-icon">
+      <use xlink:href="#calendar" />
+    </svg>
+  </div>
+  <div class="calendar" [class.visible]="visible">
+    <div class="calender-header">
+      <button class="btn-prev-month" (click)="calendar.setPrevMonth()">Prev</button>
+      <div class="chosedMonth">{{calendar.currentMonth | date: 'LLLL y'}}</div>
+      <button class="btn-next-month" (click)="calendar.setNextMonth()">Next</button>
+    </div>
+    <div class="days-container">
+      <div class="day-bar"
+           *ngFor="let day of calendar.month"
+           (click)="onCkick(day.dateObject)"
+           [class.selected-date]="isSelectedDate(day.dateObject)"
+           [class.last-clicked]="isClickedLast(day.dateObject)">
+        <div class="day-value"
+             [class.day-of-another-month]="!day.isCurrentMonth">{{day.dayOfMonth}}</div>
+      </div>
+    </div>
+  </div>
+</div>
+

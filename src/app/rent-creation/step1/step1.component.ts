@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {StepForm} from '../step-form';
 
 @Component({
   selector: 'app-step1',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./step1.component.css']
 })
 export class Step1Component implements OnInit {
-
-  constructor() { }
+  stepform: StepForm;
+  constructor() {
+    this.stepform = new StepForm(8);
+  }
 
   ngOnInit() {
   }
-
+  done(): void {
+  }
 }
