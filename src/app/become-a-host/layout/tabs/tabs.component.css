@@ -1,0 +1,75 @@
+.rent-form-tabs{
+  display: table;
+  width: 100%;
+  border-top: 1px solid #eeeeee;
+  border-left: 1px solid #dce0e0;
+  border-right: 1px solid #dce0e0;
+}
+.rent-form-tab{
+  display: table-cell;
+  text-align: center;
+  padding: 12px 14px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+  color: #484848;
+  font-family: Roboto, Arial, "Helvetica Neue", Helvetica, sans-serif;
+  background-color: #fafafa;
+  position: relative;
+
+}
+.rent-form-tab:not(:last-child):after{
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: linear-gradient(to top, #dce0e0, #d1d4d4);
+}
+
+.rent-form-tab:hover{
+  background-color: #f1f1f1;
+}
+.rent-form-tab:not(:first-child):before{
+  content: '';
+  display: none;
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  left: -1px;
+  top: 0;
+  background: linear-gradient(to top, #c3c6c6, #b9bcbc);
+}
+.rent-form-tab:not(:first-child):hover:before {
+  display: inline-block;
+}
+.rent-form-tab:hover:after{
+  /* #c3c6c6 #b9bcbc */
+  background: linear-gradient(to top, #c3c6c6, #b9bcbc);
+}
+
+
+
+.rent-form-tab--active{
+  background-color: #e7e7e7;
+}
+.rent-form-tab--active:hover{
+   background-color: #e7e7e7;
+ }
+.rent-form-tab--active:not(:last-child):after{
+  background: linear-gradient(to top, #c3c6c6, #b9bcbc);
+}
+.rent-form-tab--active:not(:first-child):before{
+  background: linear-gradient(to top, #c3c6c6, #b9bcbc);
+  display: inline-block;
+}
+/*
+.rent-form-tab--active:not(:first-child):hover:before{
+  background: linear-gradient(to top, green, green);
+}
+.rent-form-tab--active:hover:after{
+  background: linear-gradient(to top, green, green);
+}
+*/

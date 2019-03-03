@@ -1,0 +1,5 @@
+<div class="rent-form-tabs">
+  <div class="rent-form-tab"
+       *ngFor="let tab of tabs"
+       (click)="showTab(tab.id)" [class.rent-form-tab--active]="tab.id===currentTab.id">{{tab.name}}</div>
+</div>

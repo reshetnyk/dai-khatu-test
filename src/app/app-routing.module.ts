@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full'},
-  { path: 'rent/create', loadChildren: './rent-creation/rent-creation.module#RentCreationModule'},
-  ];
+  { path: 'become-a-host', loadChildren: './become-a-host/become-a-host.module#BecomeAHostModule'},
+  { path: '', redirectTo: 'home', pathMatch: 'full'}
+];
 
 @NgModule({
   imports: [

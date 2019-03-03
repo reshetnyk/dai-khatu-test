@@ -1,0 +1,45 @@
+<form [formGroup]="roomForm" (ngSubmit)="onSubmit()">
+  <label>Тип помешкання
+    <select class="select" formControlName="placeType" style="display: block">
+      <option class="select-option" class="" value="stub">виберіть варіант</option>
+      <option class="select-option" value="private_place">Приватний будинок</option>
+      <option class="select-option" value="hostel">Багатоповерхівка/гуртожиток</option>
+    </select>
+  </label>
+  <label>Тип здачі
+    <select class="select" formControlName="rentType" style="display: block">
+      <option class="select-option" class="" value="stub">виберіть варіант</option>
+      <option class="select-option" value="private_place">Все помешкання</option>
+      <option class="select-option" value="hostel">Кімната</option>
+      <option class="select-option" value="hostel">Ліжкомісце</option>
+    </select>
+  </label>
+</form>
+<!--
+<div class="properties-group">
+  <h3 class="properties-group__header">Яке житло ви здаєте?</h3>
+  <div class="property">
+    <label class="property__name" for="place-type">Тип помешкання</label>
+    <div class="property__fields">
+      <select class="select" name="place-type" id="place-type">
+        <option class="select-option" class="" value="stub">виберіть варіант</option>
+        <option class="select-option" value="private_place">Приватний будинок</option>
+        <option class="select-option" value="hostel">Багатоповерхівка/гуртожиток</option>
+      </select>
+    </div>
+    <span class="property__descr"></span>
+  </div>
+  <div class="property">
+    <label class="property__name" for="rent-type">Тип здачі</label>
+    <div class="property__fields">
+      <select class="select" name="rent-type" id="rent-type">
+        <option class="select-option" class="" value="stub">виберіть варіант</option>
+        <option class="select-option" value="private_place">Все помешкання</option>
+        <option class="select-option" value="hostel">Кімната</option>
+        <option class="select-option" value="hostel">Ліжкомісце</option>
+      </select>
+    </div>
+    <span class="property__descr"></span>
+  </div>
+</div>
+-->
