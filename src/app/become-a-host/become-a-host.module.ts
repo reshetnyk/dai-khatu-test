@@ -14,6 +14,7 @@ import { MapComponent } from './map/map.component';
 import {ActionButtonsComponent} from './layout/action-buttons/action-buttons.component';
 import { RentFormComponent } from './rent-form/rent-form.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import {StepIncBtnModule} from '../common/step-inc-btn/step-inc-btn.module';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 
   ],
   imports: [
+    StepIncBtnModule,
     CommonModule,
     BecomeAHostRoutingModule,
     ReactiveFormsModule

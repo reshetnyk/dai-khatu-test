@@ -1,17 +1,21 @@
 <form [formGroup]="roomForm" (ngSubmit)="onSubmit()">
+  <span style="display: block">Яке житло ви здаєте?</span>
+  <div *ngIf="placeTypeRequiredError" class="error" style="color: red">
+    placeTypeRequiredError!
+  </div>
   <label>Тип помешкання
-    <select class="select" formControlName="placeType" style="display: block">
-      <option class="select-option" class="" value="stub">виберіть варіант</option>
-      <option class="select-option" value="private_place">Приватний будинок</option>
-      <option class="select-option" value="hostel">Багатоповерхівка/гуртожиток</option>
+    <select class="select" formControlName="placeType" style="display: block" (change)="hidePlaceTypeRequiredError()">
+      <option class="select-option" value="null" disabled>виберіть варіант</option>
+      <option *ngFor="let placeType of placeTypes" class="select-option" value="{{placeType}}">{{placeType}}</option>
     </select>
   </label>
+  <div *ngIf="rentTypeRequiredError" class="error" style="color: red">
+    rentTypeRequiredError!
+  </div>
   <label>Тип здачі
-    <select class="select" formControlName="rentType" style="display: block">
-      <option class="select-option" class="" value="stub">виберіть варіант</option>
-      <option class="select-option" value="private_place">Все помешкання</option>
-      <option class="select-option" value="hostel">Кімната</option>
-      <option class="select-option" value="hostel">Ліжкомісце</option>
+    <select class="select" formControlName="rentType" style="display: block" (change)="hideRentTypeRequiredError()">
+      <option class="select-option" value="null" disabled>виберіть варіант</option>
+      <option *ngFor="let rentType of rentTypes" class="select-option" value="{{rentType}}">{{rentType}}</option>
     </select>
   </label>
 </form>

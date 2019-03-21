@@ -1,3 +1,48 @@
+<form [formGroup]="facilitiesForm" (ngSubmit)="onSubmit()">
+  Які зручності ви пропонуєте?
+  <label style="display: block">
+    <input class="checkbox" type="checkbox" formControlName="essentialThings">Предмети першої необхідності
+  </label>
+  <label style="display: block">
+    <input class="checkbox" type="checkbox" formControlName="internet">Інтернет
+  </label>
+  <label style="display: block">
+    <input class="checkbox" type="checkbox" formControlName="tv">TV
+  </label>
+  <label style="display: block">
+    <input class="checkbox" type="checkbox" formControlName="heating">Опалення
+  </label>
+  <label style="display: block">
+    <input class="checkbox" type="checkbox" formControlName="workplace">Стіл/робоче місце
+  </label>
+  <label style="display: block">
+    <input class="checkbox" type="checkbox" formControlName="fireplace">Камін
+  </label>
+  <label style="display: block">
+    <input class="checkbox" type="checkbox" formControlName="balcony">Балкон/лоджія
+  </label>
+  <label style="display: block">
+    <input class="checkbox" type="checkbox" formControlName="parkingPlace">Парковка/гараж
+  </label>
+  Безпека
+  <label style="display: block">
+    <input class="checkbox" type="checkbox" formControlName="smokeDetector">Датчик диму
+  </label>
+  <label style="display: block">
+    <input class="checkbox" type="checkbox" formControlName="carbonMonoxideDetector">Датчик чадного газу
+  </label>
+  <label style="display: block">
+    <input class="checkbox" type="checkbox" formControlName="firstAidKit">Аптечка першої допомоги
+  </label>
+  <label style="display: block">
+    <input class="checkbox" type="checkbox" formControlName="extinguisher">Вогнегасник
+  </label>
+  <label style="display: block">
+    <input class="checkbox" type="checkbox" formControlName="lockingDoors">Двері в спальню запераються
+  </label>
+</form>
+
+<!--
 <div class="properties-group">
   <h3 class="properties-group__header">Які зручності ви пропонуєте?</h3>
   <div class="property">
@@ -132,3 +177,4 @@
     <span class="property__descr"></span>
   </div>
 </div>
+-->

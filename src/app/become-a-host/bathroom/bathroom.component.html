@@ -1,3 +1,22 @@
+<form [formGroup]="bathForm" (ngSubmit)="onSubmit()">
+  Який санвузол доступний гостям?
+  <label style="display: block">
+    <input class="checkbox" type="checkbox" formControlName="toilet">Туалет звичайний
+  </label>
+  <label style="display: block">
+    <input class="checkbox" type="checkbox" formControlName="yardToilet">Туалет у дворі
+  </label>
+  <label style="display: block">
+    <input class="checkbox" type="checkbox" formControlName="shower">Ванна/душ
+  </label>
+  <label style="display: block">
+    <input class="checkbox" type="checkbox" formControlName="jacuzzi">Джакузі
+  </label>
+  <label style="display: block">
+    <input class="checkbox" type="checkbox" formControlName="pool">Бассейн
+  </label>
+</form>
+<!--
 <div class="properties-group">
   <h3 class="properties-group__header">Який санвузол доступний гостям?</h3>
   <div class="property">
@@ -51,3 +70,4 @@
     <span class="property__descr"></span>
   </div>
 </div>
+-->

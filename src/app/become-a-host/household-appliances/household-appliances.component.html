@@ -1,3 +1,41 @@
+<form [formGroup]="householdApplForm" (ngSubmit)="onSubmit()">
+  Кухонна та побутова техніка
+  <label style="display: block">
+    <input class="checkbox" type="checkbox" formControlName="plate">Плита
+  </label>
+  <label style="display: block">
+    <input class="checkbox" type="checkbox" formControlName="dishwasher">Посудомийна машина
+  </label>
+  <label style="display: block">
+    <input class="checkbox" type="checkbox" formControlName="oven">Духова шафа
+  </label>
+  <label style="display: block">
+    <input class="checkbox" type="checkbox" formControlName="washingMachine">Пральна машина
+  </label>
+  <label style="display: block">
+    <input class="checkbox" type="checkbox" formControlName="microwave">Мікрохвильова піч
+  </label>
+  <label style="display: block">
+    <input class="checkbox" type="checkbox" formControlName="refrigerator">Холодильник
+  </label>
+  <label style="display: block">
+    <input class="checkbox" type="checkbox" formControlName="clothesDryer">Сушилка для одягу
+  </label>
+  <label style="display: block">
+    <input class="checkbox" type="checkbox" formControlName="iron">Праска
+  </label>
+  <label style="display: block">
+    <input class="checkbox" type="checkbox" formControlName="vacuumCleaner">Пилосос
+  </label>
+  <label style="display: block">
+    <input class="checkbox" type="checkbox" formControlName="airConditioning">Кондеціонер
+  </label>
+  <label style="display: block">
+    <input class="checkbox" type="checkbox" formControlName="hairDryer">Фен
+  </label>
+</form>
+
+<!--
 <div class="properties-group">
   <h3 class="properties-group__header">Кухонна та побутова техніка</h3>
   <div class="property">
@@ -111,3 +149,4 @@
     <span class="property__descr"></span>
   </div>
 </div>
+-->

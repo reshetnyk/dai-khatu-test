@@ -1,52 +1,53 @@
-import { Component, OnInit } from '@angular/core';
+import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {RoomComponent} from '../room/room.component';
 
 @Component({
   selector: 'app-rent-form',
   templateUrl: './rent-form.component.html',
-  styleUrls: ['./rent-form.component.css']
+  styleUrls: ['./rent-form.component.css'],
 })
 export class RentFormComponent implements OnInit {
   tabs = [
     {
       id: 'room',
       name: 'Тип помешкання',
-      url: 'room'
+      component: null,
     },
     {
       id: 'guests-and-beds',
       name: 'Спальні',
-      url: 'guests-and-beds'
+      component: null,
     },
     {
       id: 'bathroom',
       name: 'Санвузол',
-      url: 'bathroom'
+      component: null,
     },
     {
       id: 'household-appliances',
       name: 'Побутова техніка',
-      url: 'household-appliances'
+      component: null,
     },
 
     {
       id: 'facilities',
       name: 'Зручності',
-      url: 'facilities'
+      component: null,
     },
     {
       id: 'limits',
       name: 'Обмеження',
-      url: 'limits'
+      component: null,
     },
     {
       id: 'location',
       name: 'Місцезнаходження',
-      url: 'location'
+      component: null,
     },
     {
       id: 'map',
       name: 'Місцезнаходження',
-      url: 'map'
+      component: null,
     },
 
   ];
@@ -56,15 +57,37 @@ export class RentFormComponent implements OnInit {
 
   ngOnInit() {
   }
+  @ViewChild('room') set room(comp: ElementRef) {
+    this.tabs[0].component = comp;
+  }
+  @ViewChild('guests') set guests(comp: ElementRef) {
+    this.tabs[1].component = comp;
+  }
+  @ViewChild('bathroom') set bathroom(comp: ElementRef) {
+    this.tabs[2].component = comp;
+  }
+  @ViewChild('householdAppliances') set householdAppliances(comp: ElementRef) {
+    this.tabs[3].component = comp;
+  }
+  @ViewChild('facilities') set facilities(comp: ElementRef) {
+    this.tabs[4].component = comp;
+  }
   showNextTab(): void {
+    if (!this.currentTab.component.onSubmit()) {
+      return;
+    }
     const currentTabIndex = this.getTabIndexById(this.currentTab.id);
     if (currentTabIndex >= this.tabs.length - 1) {
       return;
     }
     this.currentTab = this.tabs[this.getTabIndexById(this.currentTab.id) + 1];
+    console.log(this.currentTab.id);
   }
 
   showPrevTab(): void {
+    if (!this.currentTab.component.onSubmit()) {
+      return;
+    }
     const currentTabIndex = this.getTabIndexById(this.currentTab.id);
     if (currentTabIndex <= 0) {
       return;
@@ -92,6 +115,6 @@ export class RentFormComponent implements OnInit {
     }
   }
   onTabChange() {
-    window.history.replaceState({}, '', `/${this.currentTab.url}`);
+    window.history.replaceState({}, '', `/${this.currentTab.id}`);
   }
 }

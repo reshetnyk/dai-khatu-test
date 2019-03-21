@@ -1,3 +1,19 @@
+<form [formGroup]="guestsForm" (ngSubmit)="onSubmit()">
+  <label>Кількість гостей
+    <app-step-inc-btn formControlName="guests"></app-step-inc-btn>
+  </label>
+  <label>Скількома ліжками можуть користуватися гості?
+    <app-step-inc-btn formControlName="beds"></app-step-inc-btn>
+  </label>
+  <div *ngIf="!rentTypeIsABed">
+    <label>Скількома спальнями можуть користуватися гості?
+      <app-step-inc-btn formControlName="bedrooms"></app-step-inc-btn>
+    </label>
+  </div>
+</form>
+
+
+<!--
 <div class="properties-group">
   <h3 class="properties-group__header">Скільки гостей вміщує ваще житло?</h3>
 
@@ -41,3 +57,4 @@
     <span class="property__descr"></span>
   </div>
 </div>
+-->
