@@ -1,3 +1,44 @@
+<form [formGroup]="locationForm" (ngSubmit)="onSubmit()">
+  <!--
+  <div *ngIf="regionRequiredError" class="error" style="color: red">
+    regionRequiredError!
+  </div>
+  <label style="display: block">Область
+    <select class="select" formControlName="region" (change)="hideRegionRequiredError()">
+      <option class="select-option" value="null" disabled>виберіть варіант</option>
+      <option *ngFor="let region of (regions | async)?.regions" class="select-option" value="{{region.id}}">{{region.region}}</option>
+    </select>
+  </label>
+  -->
+  <mat-form-field style="display: block; width: 200px">
+    <mat-label>Область</mat-label>
+    <mat-select formControlName="region" required [compareWith]="regionSelectComparator">
+      <mat-option>--</mat-option>
+      <mat-option *ngFor="let region of (regions | async)?.regions" [value]="region">
+        {{region.region}}
+      </mat-option>
+    </mat-select>
+    <mat-hint>{{region.value?.id}}</mat-hint>
+  </mat-form-field>
+
+  <mat-form-field style="display: block; width: 200px" *ngIf="region.value?.id!=='9'">
+    <mat-label>Місто/населений пункт</mat-label>
+    <input type="text" matInput formControlName="village" [matAutocomplete]="villagesAutocompl" required>
+    <mat-autocomplete #villagesAutocompl="matAutocomplete" [displayWith]="villageDisplayFn">
+      <mat-option *ngFor="let village of (villages | async)?.villages" [value]="village">
+        {{ village.village }}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+
+  <mat-form-field style="display: block; width: 200px">
+    <mat-label>Вулиця,квартира</mat-label>
+    <input type="text" matInput formControlName="street" required>
+  </mat-form-field>
+
+  <button type="submit">submit</button>
+</form>
+<!--
 <div class="properties-group">
   <h3 class="properties-group__header">Де знаходиться ваше помешкання?</h3>
   <div class="property">
@@ -29,3 +70,4 @@
     <span class="property__descr"></span>
   </div>
 </div>
+-->

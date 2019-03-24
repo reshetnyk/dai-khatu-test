@@ -72,6 +72,15 @@ export class RentFormComponent implements OnInit {
   @ViewChild('facilities') set facilities(comp: ElementRef) {
     this.tabs[4].component = comp;
   }
+  @ViewChild('limits') set limits(comp: ElementRef) {
+    this.tabs[5].component = comp;
+  }
+  @ViewChild('location') set location(comp: ElementRef) {
+    this.tabs[6].component = comp;
+  }
+  @ViewChild('map') set map(comp: ElementRef) {
+    this.tabs[7].component = comp;
+  }
   showNextTab(): void {
     if (!this.currentTab.component.onSubmit()) {
       return;

@@ -4,9 +4,9 @@
 <app-bathroom #bathroom *ngIf="currentTab.id === 'bathroom'"></app-bathroom>
 <app-household-appliances #householdAppliances *ngIf="currentTab.id === 'household-appliances'"></app-household-appliances>
 <app-facilities #facilities *ngIf="currentTab.id === 'facilities'"></app-facilities>
-<app-limits *ngIf="currentTab.id === 'limits'"></app-limits>
-<app-location *ngIf="currentTab.id === 'location'"></app-location>
-<app-map *ngIf="currentTab.id === 'map'"></app-map>
+<app-limits #limits *ngIf="currentTab.id === 'limits'"></app-limits>
+<app-location #location *ngIf="currentTab.id === 'location'"></app-location>
+<app-map #map *ngIf="currentTab.id === 'map'"></app-map>
 <app-action-buttons
   (goingToNextTabEvent)="showNextTab($event)"
   (goingToPrevTabEvent)="showPrevTab($event)"></app-action-buttons>

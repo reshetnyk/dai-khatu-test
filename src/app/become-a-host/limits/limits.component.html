@@ -1,3 +1,32 @@
+<form [formGroup]="limitsForm" (ngSubmit)="onSubmit()">
+  Обмеження
+  <label style="display: block">
+    <input class="checkbox" type="checkbox" formControlName="forBoyOnly">Лише хлопцю
+  </label>
+  <label style="display: block">
+    <input class="checkbox" type="checkbox" formControlName="forGirlOnly">Лише дівчині
+  </label>
+  <label style="display: block">
+    <input class="checkbox" type="checkbox" formControlName="forFamilyOnly">Лише сім'ї
+  </label>
+  <label style="display: block">
+    <input class="checkbox" type="checkbox" formControlName="withoutChildren">Без дітей
+  </label>
+  <label style="display: block">
+    <input class="checkbox" type="checkbox" formControlName="notForStudents">Не студентам
+  </label>
+  <label style="display: block">
+    <input class="checkbox" type="checkbox" formControlName="withoutPets">Без домашніх улюблеців
+  </label>
+  <label style="display: block">
+    <input class="checkbox" type="checkbox" formControlName="notForSmokingPeople">Людям, які не палять
+  </label>
+  <label style="display: block">
+    <input class="checkbox" type="checkbox" formControlName="notForForeigners">Не іноземцям
+  </label>
+</form>
+
+<!--
 <div class="properties-group">
   <h3 class="properties-group__header">Обмеження</h3>
   <div class="property">
@@ -81,3 +110,4 @@
     <span class="property__descr"></span>
   </div>
 </div>
+-->
