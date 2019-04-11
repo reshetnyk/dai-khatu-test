@@ -32,18 +32,19 @@ export class FacilitiesComponent implements OnInit {
   ngOnInit() {
   }
   private loadData() {
-    const data = this.rentFormService.getFacilitiesData();
-    if (data) {
-      this.facilitiesForm.setValue(data);
-    }
+    this.rentFormService.getFacilitiesData().subscribe(facilitiesData => {
+      if (facilitiesData) {
+        this.facilitiesForm.setValue(facilitiesData);
+      }
+    });
   }
-  onSubmit(): boolean {
-    console.log(this.facilitiesForm.getRawValue());
-    if (this.facilitiesForm.invalid) {
-      return false;
-    }
-    this.rentFormService.setFacilitiesData(this.facilitiesForm.getRawValue());
-    return true;
+  public onSubmit(): Promise<boolean> {
+    return new Promise(resolve => {
+      if (this.facilitiesForm.invalid) {
+        resolve(false);
+      }
+      this.rentFormService.setFacilitiesData(this.facilitiesForm.getRawValue());
+      resolve(true);
+    });
   }
-
 }

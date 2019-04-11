@@ -29,17 +29,19 @@ export class HouseholdAppliancesComponent implements OnInit {
   ngOnInit() {
   }
   private loadData() {
-    const data = this.rentFormService.getHouseholdApplData();
-    if (data) {
-      this.householdApplForm.setValue(data);
-    }
+    this.rentFormService.getHouseholdApplData().subscribe(householdApplData => {
+      if (householdApplData) {
+        this.householdApplForm.setValue(householdApplData);
+      }
+    });
   }
-  onSubmit(): boolean {
-    console.log(this.householdApplForm.getRawValue());
-    if (this.householdApplForm.invalid) {
-      return false;
-    }
-    this.rentFormService.setHouseholdApplData(this.householdApplForm.getRawValue());
-    return true;
+  public onSubmit(): Promise<boolean> {
+    return new Promise(resolve => {
+      if (this.householdApplForm.invalid) {
+        resolve(false);
+      }
+      this.rentFormService.setHouseholdApplData(this.householdApplForm.getRawValue());
+      resolve(true);
+    });
   }
 }

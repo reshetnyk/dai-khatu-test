@@ -16,6 +16,9 @@ import { RentFormComponent } from './rent-form/rent-form.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {StepIncBtnModule} from '../common/step-inc-btn/step-inc-btn.module';
 import {MatAutocompleteModule, MatInputModule, MatSelectModule} from '@angular/material';
+import { ProgressComponent } from './layout/progress/progress.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { PageNotFound2Component } from './page-not-found2/page-not-found2.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import {MatAutocompleteModule, MatInputModule, MatSelectModule} from '@angular/m
     ActionButtonsComponent,
     LocationComponent,
     MapComponent,
-    RentFormComponent
+    RentFormComponent,
+    ProgressComponent,
+    PageNotFoundComponent,
+    PageNotFound2Component
 
   ],
   imports: [

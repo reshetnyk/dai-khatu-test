@@ -1,0 +1,260 @@
+{
+  "rentFormMock": {
+    "roomData": {
+      "placeType": "Приватний будинок",
+      "rentType": "Кімната"
+    },
+    "guestsData": {
+      "guests": 4,
+      "beds": 3,
+      "bedrooms": 2
+    },
+    "bathroomData": {
+      "toilet": true,
+      "yardToilet": true,
+      "shower": false,
+      "jacuzzi": false,
+      "pool": false
+    },
+    "householdApplData": {
+      "plate": true,
+      "dishwasher": true,
+      "oven": false,
+      "washingMachine": false,
+      "microwave": false,
+      "refrigerator": false,
+      "clothesDryer": false,
+      "iron": false,
+      "vacuumCleaner": false,
+      "airConditioning": false,
+      "hairDryer": false
+    },
+    "facilitiesData": {
+      "essentialThings": true,
+      "internet": true,
+      "tv": false,
+      "heating": false,
+      "workplace": false,
+      "fireplace": false,
+      "balcony": false,
+      "parkingPlace": false,
+      "smokeDetector": false,
+      "carbonMonoxideDetector": false,
+      "firstAidKit": false,
+      "extinguisher": false,
+      "lockingDoors": false
+    },
+    "limitsData": {
+      "forBoyOnly": true,
+      "forGirlOnly": true,
+      "forFamilyOnly": false,
+      "withoutChildren": false,
+      "notForStudents": false,
+      "withoutPets": false,
+      "notForSmokingPeople": false,
+      "notForForeigners": false
+    },
+    "locationFormData": {
+      "region": {
+        "id": "25",
+        "region": "Черкаська"
+      },
+      "village": "черкаси",
+      "street": "університет богдана хмельницького"
+    },
+    "locationGoogleData": {
+      "results": [
+        {
+          "address_components": [
+            {
+              "long_name": "81",
+              "short_name": "81",
+              "types": [
+                "street_number"
+              ]
+            },
+            {
+              "long_name": "бульвар Шевченка",
+              "short_name": "бульвар Шевченка",
+              "types": [
+                "route"
+              ]
+            },
+            {
+              "long_name": "Соснівський район",
+              "short_name": "Соснівський район",
+              "types": [
+                "political",
+                "sublocality",
+                "sublocality_level_1"
+              ]
+            },
+            {
+              "long_name": "Черкаси",
+              "short_name": "Черкаси",
+              "types": [
+                "locality",
+                "political"
+              ]
+            },
+            {
+              "long_name": "Черкаська міськрада",
+              "short_name": "Черкаська міськрада",
+              "types": [
+                "administrative_area_level_3",
+                "political"
+              ]
+            },
+            {
+              "long_name": "Черкаська область",
+              "short_name": "Черкаська область",
+              "types": [
+                "administrative_area_level_1",
+                "political"
+              ]
+            },
+            {
+              "long_name": "Україна",
+              "short_name": "UA",
+              "types": [
+                "country",
+                "political"
+              ]
+            },
+            {
+              "long_name": "18000",
+              "short_name": "18000",
+              "types": [
+                "postal_code"
+              ]
+            }
+          ],
+          "formatted_address": "бульвар Шевченка, 81, Черкаси, Черкаська область, Україна, 18000",
+          "geometry": {
+            "location": {
+              "lat": 49.4533928,
+              "lng": 32.0461858
+            },
+            "location_type": "ROOFTOP",
+            "viewport": {
+              "northeast": {
+                "lat": 49.45474178029149,
+                "lng": 32.0475347802915
+              },
+              "southwest": {
+                "lat": 49.45204381970849,
+                "lng": 32.0448368197085
+              }
+            }
+          },
+          "place_id": "ChIJ-8dtiX1L0UAR1eYMRDyNukY",
+          "plus_code": {
+            "compound_code": "F23W+9F Черкаси, Черкаська область, Україна",
+            "global_code": "8GXJF23W+9F"
+          },
+          "types": [
+            "establishment",
+            "point_of_interest",
+            "university"
+          ]
+        },
+        {
+          "address_components": [
+            {
+              "long_name": "24",
+              "short_name": "24",
+              "types": [
+                "street_number"
+              ]
+            },
+            {
+              "long_name": "вулиця Остафія Дашковича",
+              "short_name": "вулиця Остафія Дашковича",
+              "types": [
+                "route"
+              ]
+            },
+            {
+              "long_name": "Соснівський район",
+              "short_name": "Соснівський район",
+              "types": [
+                "political",
+                "sublocality",
+                "sublocality_level_1"
+              ]
+            },
+            {
+              "long_name": "Черкаси",
+              "short_name": "Черкаси",
+              "types": [
+                "locality",
+                "political"
+              ]
+            },
+            {
+              "long_name": "Черкаська міськрада",
+              "short_name": "Черкаська міськрада",
+              "types": [
+                "administrative_area_level_3",
+                "political"
+              ]
+            },
+            {
+              "long_name": "Черкаська область",
+              "short_name": "Черкаська область",
+              "types": [
+                "administrative_area_level_1",
+                "political"
+              ]
+            },
+            {
+              "long_name": "Україна",
+              "short_name": "UA",
+              "types": [
+                "country",
+                "political"
+              ]
+            },
+            {
+              "long_name": "18000",
+              "short_name": "18000",
+              "types": [
+                "postal_code"
+              ]
+            }
+          ],
+          "formatted_address": "вулиця Остафія Дашковича, 24, Черкаси, Черкаська область, Україна, 18000",
+          "geometry": {
+            "location": {
+              "lat": 49.44371470000001,
+              "lng": 32.0619464
+            },
+            "location_type": "ROOFTOP",
+            "viewport": {
+              "northeast": {
+                "lat": 49.44506368029151,
+                "lng": 32.0632953802915
+              },
+              "southwest": {
+                "lat": 49.44236571970851,
+                "lng": 32.0605974197085
+              }
+            }
+          },
+          "place_id": "ChIJ45pKun1L0UARh2Ff6Gs5VcY",
+          "plus_code": {
+            "compound_code": "C3V6+FQ Черкаси, Черкаська область, Україна",
+            "global_code": "8GXJC3V6+FQ"
+          },
+          "types": [
+            "establishment",
+            "point_of_interest",
+            "university"
+          ]
+        }
+      ],
+      "status": "OK"
+    },
+    "mapData":null
+  }
+}

@@ -1,4 +1,8 @@
 <div class="rent-form__actions">
   <button class="btn rent-form-btn-prev" (click)="showPrevTab()">Назад</button>
-  <button class="btn rent-form-btn-next" (click)="showNextTab()">Далі</button>
+  <button class="btn rent-form-btn-next" [class.loop]="tabIsSubmiting" (click)="showNextTab()">Далі
+    <div class="loop-content">
+      <svg><use xlink:href="#loop"/></svg>
+    </div>
+  </button>
 </div>

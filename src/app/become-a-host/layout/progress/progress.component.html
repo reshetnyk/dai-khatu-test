@@ -1,0 +1,4 @@
+<div class="rent-form-progress">
+  <div class="rent-form-progress-part rent-form-progress-part--first rent-form-progress-part--fill"></div>
+  <div class="rent-form-progress-part" *ngFor="let tab of tabs" [class.rent-form-progress-part--fill]="tab.submited"></div>
+</div>

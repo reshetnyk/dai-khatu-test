@@ -26,18 +26,21 @@ export class LimitsComponent implements OnInit {
   ngOnInit() {
   }
   private loadData() {
-    const data = this.rentFormService.getLimitsData();
-    if (data) {
-      this.limitsForm.setValue(data);
-    }
+    this.rentFormService.getLimitsData().subscribe(limitsData => {
+      if (limitsData) {
+        this.limitsForm.setValue(limitsData);
+      }
+    });
   }
-  onSubmit(): boolean {
-    console.log(this.limitsForm.getRawValue());
-    if (this.limitsForm.invalid) {
-      return false;
-    }
-    this.rentFormService.setLimitsData(this.limitsForm.getRawValue());
-    return true;
+
+  public onSubmit(): Promise<boolean> {
+    return new Promise(resolve => {
+      if (this.limitsForm.invalid) {
+        resolve(false);
+      }
+      this.rentFormService.setLimitsData(this.limitsForm.getRawValue());
+      resolve(true);
+    });
   }
 
 }

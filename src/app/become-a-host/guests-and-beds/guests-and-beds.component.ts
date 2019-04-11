@@ -31,15 +31,17 @@ export class GuestsAndBedsComponent implements OnInit {
     return true;
   }
   initRentType() {
-    const roomData = this.rentFormService.getRoomData();
-    if (roomData) {
-      this.rentTypeIsABed = roomData.rentType === this.RENT_TYPE_BED;
-    }
+    this.rentFormService.getRoomData().subscribe(roomData => {
+      if (roomData) {
+        this.rentTypeIsABed = roomData.rentType === this.RENT_TYPE_BED;
+      }
+    });
   }
   private loadData() {
-    const data = this.rentFormService.getGuestsData();
-    if (data) {
-      this.guestsForm.setValue(data);
-    }
+    this.rentFormService.getGuestsData().subscribe(guestsData => {
+      if (guestsData) {
+        this.guestsForm.setValue(guestsData);
+      }
+    });
   }
 }

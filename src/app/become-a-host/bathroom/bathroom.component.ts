@@ -20,19 +20,20 @@ export class BathroomComponent implements OnInit {
     });
     this.loadData();
   }
-  onSubmit() {
-    console.log('submit');
-    console.log(this.bathForm.getRawValue());
-    if (this.bathForm.invalid) {
-      return false;
-    }
-    this.rentFormService.setBathroomData(this.bathForm.getRawValue());
-    return true;
+  public onSubmit(): Promise<boolean> {
+    return new Promise(resolve => {
+      if (this.bathForm.invalid) {
+        resolve(false);
+      }
+      this.rentFormService.setBathroomData(this.bathForm.getRawValue());
+      resolve(true);
+    });
   }
   private loadData() {
-    const data = this.rentFormService.getBathroomData();
-    if (data) {
-      this.bathForm.setValue(data);
-    }
+    this.rentFormService.getBathroomData().subscribe(bathroomData => {
+      if (bathroomData) {
+        this.bathForm.setValue(bathroomData);
+      }
+    });
   }
 }

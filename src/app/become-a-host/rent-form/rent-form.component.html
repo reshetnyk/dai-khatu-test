@@ -1,4 +1,5 @@
-<app-tabs [tabs]="tabs" [currentTab]="currentTab" (showingTabListener)="showTab($event)"></app-tabs>
+<app-tabs *ngIf="!isCreatingANewRent" [tabs]="tabs" [currentTab]="currentTab" (showingTabListener)="showTabById($event)"></app-tabs>
+<app-progress *ngIf="isCreatingANewRent" [tabs]="tabs"></app-progress>
 <app-room #room *ngIf="currentTab.id === 'room'"></app-room>
 <app-guests-and-beds #guests *ngIf="currentTab.id === 'guests-and-beds'"></app-guests-and-beds>
 <app-bathroom #bathroom *ngIf="currentTab.id === 'bathroom'"></app-bathroom>
@@ -9,4 +10,5 @@
 <app-map #map *ngIf="currentTab.id === 'map'"></app-map>
 <app-action-buttons
   (goingToNextTabEvent)="showNextTab($event)"
-  (goingToPrevTabEvent)="showPrevTab($event)"></app-action-buttons>
+  (goingToPrevTabEvent)="showPrevTab($event)"
+  [tabIsSubmiting]="tabIsSubmiting"></app-action-buttons>

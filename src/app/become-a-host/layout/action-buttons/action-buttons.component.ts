@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-action-buttons',
@@ -8,6 +8,7 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 export class ActionButtonsComponent implements OnInit {
   @Output() goingToNextTabEvent = new EventEmitter<any>();
   @Output() goingToPrevTabEvent = new EventEmitter<any>();
+  @Input() tabIsSubmiting: boolean;
   constructor() { }
 
   ngOnInit() {
